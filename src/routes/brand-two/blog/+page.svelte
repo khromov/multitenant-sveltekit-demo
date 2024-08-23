@@ -1,0 +1,1 @@
+Blog from brand 2
