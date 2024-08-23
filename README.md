@@ -6,6 +6,29 @@ This project demonstrates a simple approach to creating a multitenant applicatio
 
 The app uses hostname-based routing to direct requests to tenant-specific routes, with a shared layout and custom server-side logic.
 
+## Project Structure
+
+```
+src/
+├── ...
+├── hooks.ts               # Contains reroute logic
+├── routes/
+│   ├── +layout.svelte     # Shared layout for all routes
+│   ├── brand-one/         # Brand one routes
+│   │   ├── +page.svelte
+│   │   ├── about-us/
+│   │   │   └── +page.svelte
+│   │   └── blog/
+│   │       └── +page.svelte
+│   └── brand-two/         # Brand two routes
+│       ├── +page.svelte
+│       ├── about-us/
+│       │   └── +page.svelte
+│       └── blog/
+│           └── +page.svelte
+└── 
+```
+
 ## How It Works
 
 1. When a request comes in, the `reroute` hook examines the hostname.
